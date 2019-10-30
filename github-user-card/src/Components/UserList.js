@@ -5,15 +5,9 @@ function UserList(props) {
 	console.log('UserList:', props);
 	return (
 		<div className='User-list'>
-			<User image={props.user.avatar_url} header={props.user.name} following={props.user.following} />
+			<User image={props.user.avatar_url} header={props.user.name} subheader={props.user.login} />
 			{props.followers.map((follower) => (
-				<User
-					key={follower.id}
-					image={follower.avatar_url}
-					header={follower.name}
-					subheader={follower.login}
-					following={follower.following}
-				/>
+				<User key={follower.id} image={follower.avatar_url} header={follower.login} />
 			))}
 		</div>
 	);

@@ -14,14 +14,19 @@ class App extends React.Component {
 
 	componentDidMount() {
 		axios.get('https://api.github.com/users/bradzickafoose').then((response) => {
-			console.log('Ze data response:', response);
+			console.log('Ze user response:', response);
 			this.setState({
 				user : response.data,
 			});
 		});
 		axios
 			.get('https://api.github.com/users/bradzickafoose/followers')
-			.then((response) => this.setState({ followers: response.data }))
+			.then((response) => {
+				console.log('Ze follower response:', response);
+				this.setState({
+					followers : response.data,
+				});
+			})
 			.catch((error) => console.log(error));
 	}
 

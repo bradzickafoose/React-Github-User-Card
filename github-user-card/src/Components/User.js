@@ -1,6 +1,4 @@
 import React from 'react';
-// import { Card } from 'semantic-ui-react';
-// import 'semantic-ui-css/semantic.min.css';
 
 function User(props) {
 	console.log('User:', props);
@@ -10,8 +8,6 @@ function User(props) {
 			<h1>{props.header}</h1>
 			<p>{props.subheader}</p>
 		</div>
-
-		// <Card image={props.image} header={props.header} />
 	);
 }
 
