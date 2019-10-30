@@ -1,3 +1,6 @@
+* {
+	max-width: 100%;
+}
 .App {
 	background-color: rgb(250, 250, 250);
 	text-align: center;
@@ -16,9 +19,22 @@
 	justify-content: center;
 	font-size: calc(10px + 2vmin);
 	color: white;
-	margin-bottom: 4em;
+	margin-bottom: 1em;
 }
 
 .App-link {
 	color: #3e49a5;
+}
+
+.User-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+	grid-gap: 1rem;
+	padding: 1em;
+}
+
+.User-card {
+	padding: 1em;
+	border: 1px solid #ccc;
+	border-radius: 8px;
 }
