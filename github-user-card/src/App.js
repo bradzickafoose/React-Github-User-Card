@@ -1,21 +1,22 @@
 import React from 'react';
 import axios from 'axios';
+import UserList from './Components/UserList';
 import './App.css';
 
 class App extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			user      : { data: '' },
+			user      : {},
 			followers : [],
 		};
 	}
 
 	componentDidMount() {
 		axios.get('https://api.github.com/users/bradzickafoose').then((response) => {
-			console.log(response);
+			console.log('Ze response:', response);
 			this.setState({
-				user : response,
+				user : response.data,
 			});
 		});
 		axios
@@ -30,14 +31,7 @@ class App extends React.Component {
 				<header className='App-header'>
 					<h1>Git Hub Users</h1>
 				</header>
-				{this.state.followers.map((follower) => (
-					<div key={follower.id}>
-						<a href={follower.html_url}>
-							<img src={follower.avatar_url} alt={follower.login} />
-							<h3>{follower.login}</h3>
-						</a>
-					</div>
-				))}
+				<UserList user={this.state.user} followers={this.state.followers} />
 			</div>
 		);
 	}

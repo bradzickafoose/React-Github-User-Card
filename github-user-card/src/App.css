@@ -1,4 +1,5 @@
 .App {
+	background-color: rgb(250, 250, 250);
 	text-align: center;
 }
 
@@ -7,7 +8,7 @@
 }
 
 .App-header {
-	background-color: #282c34;
+	background-color: #3e49a5;
 	height: 80px;
 	display: flex;
 	flex-direction: column;
@@ -19,5 +20,5 @@
 }
 
 .App-link {
-	color: #09d3ac;
+	color: #3e49a5;
 }
