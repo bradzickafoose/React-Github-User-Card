@@ -39,3 +39,16 @@
 	border: 1px solid #ccc;
 	border-radius: 8px;
 }
+
+.User-card a {
+	text-decoration: none;
+	color: #3e49a5;
+}
+
+.User-card h1 {
+	margin-bottom: 0;
+}
+
+.User-card p {
+	margin-top: 0;
+}
