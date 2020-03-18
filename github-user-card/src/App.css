@@ -1,0 +1,54 @@
+* {
+	max-width: 100%;
+}
+.App {
+	background-color: rgb(247, 247, 247);
+	text-align: center;
+}
+
+.App-logo {
+	height: 40vmin;
+}
+
+.App-header {
+	background-color: #3e49a5;
+	height: 80px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+	margin-bottom: 1em;
+}
+
+.App-link {
+	color: #3e49a5;
+}
+
+.User-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+	grid-gap: 1rem;
+	padding: 1em;
+}
+
+.User-card {
+	padding: 1em;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+}
+
+.User-card a {
+	text-decoration: none;
+	color: #3e49a5;
+}
+
+.User-card h1 {
+	margin-bottom: 0;
+}
+
+.User-card p {
+	margin-top: 0;
+}
